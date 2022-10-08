@@ -1,0 +1,68 @@
+\documentclass[10pt, a4j, uplatex]{jsarticle}
+\usepackage[bold, deluxe]{otf}
+\pagestyle{empty}
+
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+%\renewcommand{\ttdefault}{pcr}
+
+\def\挨拶{\noindent 拝啓\hspace{1zw}\ifcase\month\or
+寒風\or 春寒\or 早春\or 春暖\or 新緑\or 初夏\or 盛夏\or 晩夏\or 初秋\or 秋冷\or 晩秋\or 初冬\fi
+の候，ますますご清祥のこととお慶び申し上げます。}
+\renewcommand{\labelenumi}{(\theenumi )}
+\renewcommand{\theenumii}{\ajLabel\ajMaru{enumii}}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumiii}{\arabic{enumiii}}
+\renewcommand{\labelenumiii}{(\theenumiii)}
+
+
+\begin{document}
+
+\begin{flushright}
+\today
+\end{flushright}
+\begin{flushleft}
+相手
+\end{flushleft}
+\begin{flushright}
+自分
+\end{flushright}
+
+\vspace{\baselineskip}
+
+\挨拶
+
+本文
+
+\hfill
+敬具
+
+\vspace{\baselineskip}
+
+{\centering
+記
+\begin{center}
+\begin{minipage}{.9\textwidth}
+\begin{enumerate}
+	\item ○○○\dotfill 1部
+\end{enumerate}
+\begin{flushright}
+以上
+\end{flushright}
+\end{minipage}
+\end{center}
+}
+\vfill
+
+\hfill
+%\fbox{
+\vbox{
+\hbox{\gtfamily{\bfseries 連絡先：}}
+\hbox{〒000-0000　○○市}
+\hbox{電話番号: 090-}
+\hbox{E-mail: \texttt{\small xxx@xxx.com}}
+%}
+}
+
+
+\end{document}
