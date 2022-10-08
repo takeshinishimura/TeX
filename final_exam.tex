@@ -1,0 +1,495 @@
+\documentclass[10pt, a4j, uplatex]{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[bold,deluxe]{otf}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 余白
+\setlength{\topmargin}{-15mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\oddsidemargin}{-7.4mm}
+\setlength{\textheight}{277mm}
+\setlength{\textwidth}{172mm}
+\setlength{\marginparsep}{3mm}
+\setlength{\marginparwidth}{50mm}
+
+
+\newcommand{\testdate}{202x年x月xx日（x）\hspace{-.3em}\underline{\hspace{1em}3\hspace{1em}}時限}
+\newcommand{\subject}{授業科目名}
+\newcommand{\name}{担当者名}
+\newcommand{\university}{大学名}
+\newcommand{\department}{学部名}
+\newcommand{\discipline}{学科名}
+\newcommand{\grade}{}
+\newcommand{\testheader}{\hfill 試験日\hspace{1zw}\testdate\\%
+	授業科目〔\hspace{1zw}\subject\hspace{1zw}〕担当者〔\name 〕\hfill \university\underline{\hspace{.5zw}\department\hspace{.5zw}}学部\underline{\hspace{.5zw}\discipline\hspace{.5zw}}学科\underline{\hspace{1em}\grade\hspace{1em}}年\\}
+\newcommand{\mochikomi}{\underline{※教科書，参考書，配付資料，ノート等持ち込み不可}}
+\newenvironment{question}[1]{%
+	\noindent\hangindent=4.15em\hangafter=1{\setlength{\fboxrule}{.4pt}\fbox{\mgfamily\textbf{問題 #1}}}\hspace{.5zw}}%
+	{\vspace{.1\baselineskip}}
+\newenvironment{answer}[1]{%
+	\noindent{\setlength{\fboxrule}{.4pt}\fbox{\mgfamily\textbf{問題 #1}}}\par\vspace{.1\baselineskip}}%
+	{\vspace{.2\baselineskip}}
+\newcommand{\takasa}[1]{\raisebox{-1.5ex}[0pt][0pt]{#1}}
+
+% アイウエオ順
+\makeatletter
+\def\@aiueo#1{%
+	\ifcase#1 □\or ア\or イ\or ウ\or エ\or オ\or カ\or キ\or ク\or ケ\or コ\or
+	サ\or シ\or ス\or セ\or ソ\or タ\or チ\or ツ\or テ\or ト\else\@ctrerr\fi%
+}
+\def\aiueo#1{\expandafter\@aiueo\csname c@#1\endcsname}
+\makeatother
+
+\renewcommand{\theenumi}{\mgfamily\ajLabel\ajKuroMaru{enumi}}
+\renewcommand{\theenumii}{\mgfamily\aiueo{enumii}}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\labelenumii}{\theenumii}
+
+\def\bango#1{\mgfamily\ajKuroMaru{#1}}
+
+\makeatletter
+\renewcommand{\p@enumii}{}
+\makeatother
+
+
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\def\均等割付#1#2{% 均等割付（#1 文字分，#2 割付対象文字）
+	\hbox to #1\bgroup\kanjiskip=0pt plus 1fil minus 1fil #2\egroup%
+}
+
+
+\begin{document}
+
+
+% 問題用紙
+\testheader
+{\gtfamily\bfseries 問題用紙}\quad{\small\mochikomi}
+
+\vspace{1\baselineskip}
+
+\begin{question}{１}
+次の{\ref{1:first}}から{\ref{1:last}}のそれぞれについて，選択肢の中からもっとも適切なものを選びなさい。（各3点，計18点）
+
+\begin{enumerate}
+\setlength{\itemsep}{.5\baselineskip}
+	\item ○○の特徴として正しく\.な\.いものは，次のうちどれですか。\label{1:first}
+	\begin{enumerate}
+		\item foo11
+		\item foo12
+		\item foo13
+		\item foo14\label{1:1}
+	\end{enumerate}
+	\item ○○の定義として正しいものは，次のうちどれですか。
+	\begin{enumerate}
+		\item foo21
+		\item foo22\label{1:2}
+		\item foo23
+		\item foo24
+	\end{enumerate}
+	\item ○○の例として正しく\.な\.いものは，次のうちどれですか。
+	\begin{enumerate}
+		\item foo31
+		\item foo32
+		\item foo33\label{1:3}
+		\item foo34
+	\end{enumerate}
+	\item ○○として正しく\.な\.いものは，次のうちどれですか。
+	\begin{enumerate}
+		\item foo41
+		\item foo42\label{1:4}
+		\item foo43
+		\item foo44
+	\end{enumerate}
+	\item ○○の説明として正しいものは，次のうちどれですか。
+	\begin{enumerate}
+		\item foo51
+		\item foo52
+		\item foo53
+		\item foo54\label{1:5}
+	\end{enumerate}
+	\item ○○として正しく\.な\.いものは，次のうちどれですか。\label{1:last}
+	\begin{enumerate}
+		\item foo61\label{1:6}
+		\item foo62
+		\item foo63
+		\item foo64
+	\end{enumerate}
+\end{enumerate}
+\end{question}
+
+\vfill
+
+\begin{question}{２}
+次の{\ref{2:first}}から{\ref{2:last}}のかっこ内にあてはまる適切な語句または数値を記入しなさい。記入する語句としては，漢字，ひらがな，カタカナのどれでもよい。（各3点，計18点）
+
+\begin{enumerate}
+	\item ○○のことを，（\qquad\qquad\qquad ）という。\label{2:first}
+	\item ○○することは，（\qquad\qquad\qquad ）という考え方に基づいている。この考え方に○○が，欧米では進められている。
+	\item ○○のことを，（\qquad\qquad\qquad ）という。
+\vfill
+\hfill □\llap{\ajCheckmark}裏面につづく
+\newpage
+	\item ○○は（\qquad\qquad\qquad ）$\textrm{m}^2$である。
+	\item ○○のことを，（\qquad\qquad\qquad ）制度という。
+	\item 一般的に，○○がよいとされる理由は，○○，すなわち，（\qquad\qquad\qquad ）が小さいことにある。\label{2:last}
+\end{enumerate}
+\end{question}
+
+
+\vspace{2\baselineskip}
+\begin{question}{３}
+次の{\ref{3:first}}から{\ref{3:last}}のそれぞれについて，正しいものに○，誤っているものに×をつけなさい。（各2点，計34点）
+
+\begin{enumerate}
+	\item bar1。\label{3:first}
+	\item bar2
+	\item bar3
+	\item bar4
+	\item bar5
+\vspace{.5\baselineskip}
+	\item bar6
+	\item bar7
+	\item bar8
+	\item bar9
+	\item bar10
+\vspace{.5\baselineskip}
+	\item bar11
+	\item bar12
+	\item bar13
+	\item bar14
+	\item bar15
+\vspace{.5\baselineskip}
+	\item bar16
+	\item bar17。\label{3:last}
+\end{enumerate}
+\end{question}
+
+\vspace{2\baselineskip}
+\begin{question}{４}
+次の{\ref{4:first}}から{\ref{4:last}}のそれぞれの語句を簡潔に説明しなさい。（各5点，計20点）
+
+\newcommand{\語句一}{語句1}
+\newcommand{\語句二}{語句2}
+\newcommand{\語句三}{語句3}
+\newcommand{\語句四}{語句4}
+
+\begin{enumerate}
+	\item \語句一\label{4:first}
+	\item \語句二
+	\item \語句三
+	\item \語句四\label{4:last}
+\end{enumerate}
+\end{question}
+
+\vspace{2\baselineskip}
+\begin{question}{５}
+次の4つの語句を用いて，○○しなさい。（10点）
+
+{\gtfamily 次の語句を必ず1回は使用すること}：○○，○○，○○，○○
+\end{question}
+\vfill
+
+
+% 解答用紙
+\newpage
+\testheader
+{\gtfamily\bfseries 解答用紙}\quad{\small\mochikomi}
+\begin{flushleft}
+\hfill 学籍番号\underline{\hspace{10zw}}\qquad 氏名\underline{\hspace{10zw}}
+\end{flushleft}
+
+
+\begin{answer}{１}
+\noindent
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+{\mgfamily\ajKuroMaru{1}} & {\mgfamily\ajKuroMaru{2}} & {\mgfamily\ajKuroMaru{3}} & {\mgfamily\ajKuroMaru{4}} & {\mgfamily\ajKuroMaru{5}} & {\mgfamily\ajKuroMaru{6}}\\
+\hline
+\takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\hline
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{２}
+\noindent
+\begin{tabular}{|c|p{23.4zw}|c|p{23.4zw}|}
+\hline
+\takasa{\mgfamily\ajKuroMaru{1}} & \takasa{ } & \takasa{\mgfamily\ajKuroMaru{2}} & \takasa{ }\\
+ & & & \\
+\hline
+\takasa{\mgfamily\ajKuroMaru{3}} & \takasa{ } & \takasa{\mgfamily\ajKuroMaru{4}} & \takasa{ }\\
+ & & & \\
+\hline
+\takasa{\mgfamily\ajKuroMaru{5}} & \takasa{ } & \takasa{\mgfamily\ajKuroMaru{6}} & \takasa{ }\\
+ & & & \\
+\hline
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{３}
+\noindent
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\mgfamily\ajKuroMaru{1}} & {\mgfamily\ajKuroMaru{2}} & {\mgfamily\ajKuroMaru{3}} & {\mgfamily\ajKuroMaru{4}} & {\mgfamily\ajKuroMaru{5}} & {\mgfamily\ajKuroMaru{6}} & {\mgfamily\ajKuroMaru{7}} & {\mgfamily\ajKuroMaru{8}} & {\mgfamily\ajKuroMaru{9}} & {\mgfamily\ajKuroMaru{10}}\\
+\hline
+\takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\hline
+{\mgfamily\ajKuroMaru{11}} & {\mgfamily\ajKuroMaru{12}} & {\mgfamily\ajKuroMaru{13}} & {\mgfamily\ajKuroMaru{14}} & {\mgfamily\ajKuroMaru{15}} & {\mgfamily\ajKuroMaru{16}} & {\mgfamily\ajKuroMaru{17}}\\
+\cline{1-7}
+\takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null} & \takasa{\null}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\cline{1-7}
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{４}
+\noindent
+\begin{tabular}{|c|p{50.35zw}|}
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{1} & \\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{2} & \\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{3} & \\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{4} & \\
+ & \\
+ & \\
+\hline
+\end{tabular}
+\end{answer}
+\hfill □\llap{\ajCheckmark}裏面につづく
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{５}
+\noindent
+\begin{tabular}{|p{52.65zw}|}
+\hline
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\hline
+\end{tabular}
+\end{answer}
+
+
+\newpage
+\testheader
+{\gtfamily\bfseries 解答用紙}\quad{\small\mochikomi}
+\begin{flushleft}
+\hfill 学籍番号\underline{\hspace{10zw}}\qquad 氏名\underline{\hspace{10zw}}
+\end{flushleft}
+
+\begin{answer}{１}
+\noindent
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+{\mgfamily\ajKuroMaru{1}} & {\mgfamily\ajKuroMaru{2}} & {\mgfamily\ajKuroMaru{3}} & {\mgfamily\ajKuroMaru{4}} & {\mgfamily\ajKuroMaru{5}} & {\mgfamily\ajKuroMaru{6}}\\
+\hline
+\takasa{\mgfamily\ref{1:1}} & \takasa{\mgfamily\ref{1:2}} & \takasa{\mgfamily\ref{1:3}} & \takasa{\mgfamily\ref{1:4}} & \takasa{\mgfamily\ref{1:5}} & \takasa{\mgfamily\ref{1:6}}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\hline
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{２}
+\noindent
+\begin{tabular}{|c|p{23.4zw}|c|p{23.4zw}|}
+\hline
+\takasa{\mgfamily\ajKuroMaru{1}} & \takasa{○○} & \takasa{\mgfamily\ajKuroMaru{2}} & \takasa{○○}\\
+ & & & \\
+\hline
+\takasa{\mgfamily\ajKuroMaru{3}} & \takasa{○○} & \takasa{\mgfamily\ajKuroMaru{4}} & \takasa{○○}\\
+ & & & \\
+\hline
+\takasa{\mgfamily\ajKuroMaru{5}} & \takasa{○○} & \takasa{\mgfamily\ajKuroMaru{6}} & \takasa{○○}\\
+ & & & \\
+\hline
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{３}
+\noindent
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\mgfamily\ajKuroMaru{1}} & {\mgfamily\ajKuroMaru{2}} & {\mgfamily\ajKuroMaru{3}} & {\mgfamily\ajKuroMaru{4}} & {\mgfamily\ajKuroMaru{5}} & {\mgfamily\ajKuroMaru{6}} & {\mgfamily\ajKuroMaru{7}} & {\mgfamily\ajKuroMaru{8}} & {\mgfamily\ajKuroMaru{9}} & {\mgfamily\ajKuroMaru{10}}\\
+\hline
+\takasa{×} & \takasa{×} & \takasa{×} & \takasa{×} & \takasa{×} & \takasa{×} & \takasa{×} & \takasa{○} & \takasa{×} & \takasa{×}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\hline
+{\mgfamily\ajKuroMaru{11}} & {\mgfamily\ajKuroMaru{12}} & {\mgfamily\ajKuroMaru{13}} & {\mgfamily\ajKuroMaru{14}} & {\mgfamily\ajKuroMaru{15}} & {\mgfamily\ajKuroMaru{16}} & {\mgfamily\ajKuroMaru{17}}\\
+\cline{1-7}
+\takasa{○} & \takasa{×} & \takasa{×} & \takasa{○} & \takasa{○} & \takasa{×} & \takasa{×}\\
+\multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}}{} & \multicolumn{1}{|p{3zw}|}{}\\
+\cline{1-7}
+\end{tabular}
+\end{answer}
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{４}
+\noindent
+\begin{tabular}{|c|p{50.35zw}|}
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{1} & 語句1の説明\\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{2} & 語句2の説明\\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{3} & 語句3の説明\\
+ & \\
+ & \\
+\hline
+ & \\
+ & \\
+\mgfamily\ajKuroMaru{4} & 語句4の説明\\
+ & \\
+ & \\
+\hline
+\end{tabular}
+\end{answer}
+\hfill □\llap{\ajCheckmark}裏面につづく
+
+\vspace{.5\baselineskip}
+
+\begin{answer}{５}
+\noindent
+\begin{tabular}{|p{52.65zw}|}
+\hline
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\hline
+\end{tabular}
+\end{answer}
+
+
+\end{document}
