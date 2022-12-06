@@ -1,0 +1,63 @@
+\documentclass[a4paper,uplatex]{article}
+\usepackage[dvipdfmx]{graphicx}
+\pagestyle{empty}
+
+% PDF は 91mm x 55mm の大きさ
+\def\EPSJP{filename_jp.pdf}
+\def\EPSEN{filename_en.pdf}
+
+% hoffset と voffset が 0mm の場合，A4 の中央（上下 11mm，左右 14mm の余白）
+\hoffset=0mm
+\voffset=0mm
+
+% 変更しない
+\evensidemargin=-1in
+\oddsidemargin=-1in
+\topmargin=-1in
+\headheight=0mm
+\headsep=5mm
+\textwidth=210mm
+\textheight=297mm
+
+% 微調整
+\def\VSEP{\vspace{-1.5pt}}
+\def\HSEP{\hspace{-0.5pt}}
+
+
+\begin{document}
+% 表面
+\parindent 0pt
+\newcount\nrepmax \nrepmax=6\relax
+\newcount\nrep \nrep=1\relax
+\newcount\inc \inc=1\relax
+\vspace*{2mm}%
+\loop%
+\noindent%
+\begin{minipage}{196mm}%
+\hspace{14mm}%
+\includegraphics[bb=0 0 91mm 55mm]{\EPSJP}%
+\HSEP%
+\includegraphics[bb=0 0 91mm 55mm,origin=c,angle=180]{\EPSJP}%
+\end{minipage}\par%
+\VSEP%
+\advance\nrep\inc\relax\ifnum\nrep<\nrepmax\relax%
+\repeat%
+% 裏面
+\newpage
+\parindent 0pt
+\newcount\nrepmax \nrepmax=6\relax
+\newcount\nrep \nrep=1\relax
+\newcount\inc \inc=1\relax
+\vspace*{2mm}%
+\loop%
+\noindent%
+\begin{minipage}{196mm}%
+\hspace{14mm}%
+\includegraphics[bb=0 0 91mm 55mm,origin=c,angle=180]{\EPSEN}%
+\HSEP%
+\includegraphics[bb=0 0 91mm 55mm]{\EPSEN}%
+\end{minipage}\par%
+\VSEP%
+\advance\nrep\inc\relax\ifnum\nrep<\nrepmax\relax%
+\repeat%
+\end{document}
