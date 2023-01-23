@@ -16,15 +16,21 @@
 \setlength{\marginparwidth}{50mm}
 
 
-\newcommand{\testdate}{202x年x月xx日（x）\hspace{-.3em}\underline{\hspace{1em}3\hspace{1em}}時限}
+\newcommand{\testday}{2023年x月xx日（x）}
+\newcommand{\testime}{1}
 \newcommand{\subject}{授業科目名}
-\newcommand{\name}{担当者名}
+\newcommand{\name}{担当教員名}
 \newcommand{\university}{大学名}
 \newcommand{\department}{学部名}
-\newcommand{\discipline}{学科名}
+\newcommand{\discipline}{}
 \newcommand{\grade}{}
-\newcommand{\testheader}{\hfill 試験日\hspace{1zw}\testdate\\%
-	授業科目〔\hspace{1zw}\subject\hspace{1zw}〕担当者〔\name 〕\hfill \university\underline{\hspace{.5zw}\department\hspace{.5zw}}学部\underline{\hspace{.5zw}\discipline\hspace{.5zw}}学科\underline{\hspace{1em}\grade\hspace{1em}}年\\}
+\newcommand{\testheader}{%
+	\hfill \fbox{試験日}\fbox{\;\testday\testime 時限\;}\\%
+	授業科目〔\vbox{\hsize=80pt\centering\subject}〕
+	担当教員〔\vbox{\hsize=60pt\centering\name}〕\hfill
+	\university\hspace{1em}
+	\underline{\vbox{\hsize=50pt\centering\department}}学部\hspace{1em}
+	\underline{\hspace{1em}\grade\hspace{1em}}年\\}
 \newcommand{\mochikomi}{\underline{※教科書，参考書，配付資料，ノート等持ち込み不可}}
 \newenvironment{question}[1]{%
 	\noindent\hangindent=4.15em\hangafter=1{\setlength{\fboxrule}{.4pt}\fbox{\mgfamily\textbf{問題 #1}}}\hspace{.5zw}}%
@@ -129,15 +135,15 @@
 次の{\ref{2:first}}から{\ref{2:last}}のかっこ内にあてはまる適切な語句または数値を記入しなさい。記入する語句としては，漢字，ひらがな，カタカナのどれでもよい。（各3点，計18点）
 
 \begin{enumerate}
-	\item ○○のことを，（\qquad\qquad\qquad ）という。\label{2:first}
-	\item ○○することは，（\qquad\qquad\qquad ）という考え方に基づいている。この考え方に○○が，欧米では進められている。
-	\item ○○のことを，（\qquad\qquad\qquad ）という。
+	\item ○○のことを，（\vbox{\hsize=60pt \phantom{}}）という。\label{2:first}
+	\item ○○することは，（\vbox{\hsize=60pt \phantom{}}）という考え方に基づいている。この考え方に○○が，欧米では進められている。
+	\item ○○のことを，（\vbox{\hsize=60pt \phantom{}}）という。
 \vfill
 \hfill □\llap{\ajCheckmark}裏面につづく
 \newpage
 	\item ○○は（\qquad\qquad\qquad ）$\textrm{m}^2$である。
-	\item ○○のことを，（\qquad\qquad\qquad ）制度という。
-	\item 一般的に，○○がよいとされる理由は，○○，すなわち，（\qquad\qquad\qquad ）が小さいことにある。\label{2:last}
+	\item ○○のことを，（\vbox{\hsize=60pt \phantom{}}）制度という。
+	\item 一般的に，○○がよいとされる理由は，○○，すなわち，（\vbox{\hsize=60pt \phantom{}}）が小さいことにある。\label{2:last}
 \end{enumerate}
 \end{question}
 
